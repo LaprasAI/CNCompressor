@@ -2,11 +2,11 @@ import AVFoundation
 
 let processingQueue = DispatchQueue(label: "task", qos: .userInitiated, attributes: .concurrent)
 
-class CompressionCancel {
+public class CompressionCancel {
     var cancel = false
 }
 
-enum AudioSampleRate: Int {
+public enum AudioSampleRate: Int {
     //48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000
     case k48000 = 48000
     case k44100 = 44100
@@ -19,7 +19,7 @@ enum AudioSampleRate: Int {
     case k8000 = 8000
 }
 
-struct CompressionConfig {
+public struct CompressionConfig {
     let videoBitrate: Int
     let audioBitrate: Int
     let audioSampleRate: AudioSampleRate
@@ -37,13 +37,13 @@ struct CompressionConfig {
     )
 }
 
-enum CompressionResult {
+public enum CompressionResult {
     case success(URL)
     case failure(Error)
     case cancelled
 }
 
-func compressVideo(_ urlToCompress: URL, _ outputURL: URL, _ compressionConfig: CompressionConfig, _ progressQueue: DispatchQueue, _ progressHandler: ((Progress) -> ())?, _ audioProgressHandler: ((Progress) -> ())?,  _ completeHandler: @escaping (CompressionResult) -> Void) -> CompressionCancel {
+public func compressVideo(_ urlToCompress: URL, _ outputURL: URL, _ compressionConfig: CompressionConfig, _ progressQueue: DispatchQueue, _ progressHandler: ((Progress) -> ())?, _ audioProgressHandler: ((Progress) -> ())?,  _ completeHandler: @escaping (CompressionResult) -> Void) -> CompressionCancel {
     
     let cancelable = CompressionCancel()
     
