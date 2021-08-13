@@ -1,0 +1,6 @@
+use_frameworks!
+target 'CNCompressor_Tests' do
+  pod 'CNCompressor', :path => '../'
+  
+  
+end
