@@ -1,0 +1,6 @@
+framework module Pods_CNCompressor_Tests {
+  umbrella header "Pods-CNCompressor_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

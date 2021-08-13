@@ -1,0 +1,16 @@
+PODS:
+  - CNCompressor (0.1.0)
+
+DEPENDENCIES:
+  - CNCompressor (from `../`)
+
+EXTERNAL SOURCES:
+  CNCompressor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CNCompressor: 0285b151c641f538f5c0f6e4d4841a2c20744621
+
+PODFILE CHECKSUM: 8cafaccc453a5c4aac95cc4cb1bcd4de4d53ca71
+
+COCOAPODS: 1.10.1
